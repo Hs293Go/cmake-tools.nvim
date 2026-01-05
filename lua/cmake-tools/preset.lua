@@ -296,7 +296,7 @@ function Preset:get_build_configuration_types()
   end
   local configuration_types = self.cacheVariables.CMAKE_CONFIGURATION_TYPES
 
-  return utils.split_string_by_delimiter(configuration_types, ";")
+  return vim.split(configuration_types, ";", { trimempty = true })
 end
 
 return Preset
