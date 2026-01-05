@@ -250,6 +250,7 @@ local function parseTree(self, get_preset)
         current.binaryDir = current.binaryDir or parent.binaryDir
         current.cacheVariables =
           vim.tbl_deep_extend("keep", current.cacheVariables, parent.cacheVariables)
+        current.generator = current.generator or parent.generator
       end
     end
   end
